@@ -1,0 +1,14 @@
+def sybase_connect_select(ip,user,password,sql):
+    sybase_connect = pypyodbc.connect(f'DSN={ip};UID={user};pwd={password}') #创建一个连接对象
+    sybase_cursor = sybase_connect.cursor() 	#定义游标对象
+    sybase_cursor.execute(sql)		#执行语句
+    rows = sybase_cursor.fetchall() #返回所有的查询结果
+    sybase_cursor.close()#关闭游标
+    sybase_connect.close() #关闭连接
+    return rows #返回查询结果
+
+if __name__ == '__main__':
+	npsql='select * from table_name'#查询语句
+	rows=sybase_connect_select('192.168.68.25','sa','123456',npsql)#获取查询结果
+	for row in rows:
+		print(row) #打印查询结果
