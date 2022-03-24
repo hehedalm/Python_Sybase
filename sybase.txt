@@ -1,3 +1,4 @@
+import pypyodbc
 def sybase_connect_select(ip,user,password,sql):
     sybase_connect = pypyodbc.connect(f'DSN={ip};UID={user};pwd={password}') #创建一个连接对象
     sybase_cursor = sybase_connect.cursor() 	#定义游标对象
