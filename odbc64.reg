@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST.INI\Adaptive Server Enterprise 15.x]
+"Driver"="d:\\SybaseASE_ODBC\\DataAccess64\\ODBC\\dll\\sybdrvodb64.dll"
+"Setup"="d:\\SybaseASE_ODBC\\DataAccess64\\ODBC\\dll\\sybdrvodb64.dll"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST.INI\ODBC Drivers]
+"Adaptive Server Enterprise 15.x"="Installed"
