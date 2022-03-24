@@ -7,7 +7,6 @@ def sybase_connect_select(ip,user,password,sql):
     sybase_cursor.close()#关闭游标
     sybase_connect.close() #关闭连接
     return rows #返回查询结果
-
 if __name__ == '__main__':
 	npsql='select * from table_name'#查询语句
 	rows=sybase_connect_select('192.168.68.25','sa','123456',npsql)#获取查询结果
